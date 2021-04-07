@@ -6,9 +6,6 @@ from email.message import EmailMessage
 from easy_colors import Colors
 
 class SendMail:
-
-	global email
-	email = EmailMessage()
 	
 	# **All paramters are strings unless otherwise specificied**
 
@@ -21,6 +18,10 @@ class SendMail:
 			# If no such environment variable exists, 'sender' is required
 	# DO NOT USE CONSTRUCTOR TO ATTACH FILES OR ADD HTML --> use methods instead
 	def __init__(self, recipients, subject, message, sender=os.environ.get('EMAIL_ADDRESS'), html_message=None, files=None):
+
+		global email
+		email = EmailMessage()
+
 		self.recipients = recipients
 		self.subject = subject
 		self.message = message

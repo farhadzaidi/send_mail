@@ -5,7 +5,7 @@ with open('README.md', 'r') as desc:
 
 setup(
 	name='send_mail',
-	version='0.0.1',
+	version='0.0.2',
 	description='Sending emails in python just became much easier',
 	py_modules=['send_mail'],
 	package_dir={'': 'src'},
